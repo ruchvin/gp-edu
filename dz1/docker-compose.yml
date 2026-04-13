@@ -14,6 +14,5 @@ services:
       GP_POSTGRES_CONF: "listen_addresses = '*'"
     volumes:
       - greenplum_data:/srv
-
 volumes:
   greenplum_data:
