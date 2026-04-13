@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  greenplum:
+    image: pro100filipp/greenplum-with-pxf:latest
+    container_name: greenplum-single-node
+    restart: always
+    ports:
+      - "7432:5432"
+    environment:
+      GP_USER: gpadmin
+      GP_PASSWORD: gpadmin
+      GP_DB: testdb
+      GP_POSTGRES_CONF: "listen_addresses = '*'"
+    volumes:
+      - greenplum_data:/srv
+
+volumes:
+  greenplum_data:
