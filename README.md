@@ -1,0 +1,2 @@
+# gp-edu
+Обучение Greenplum
